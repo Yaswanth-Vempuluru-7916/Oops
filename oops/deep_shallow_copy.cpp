@@ -23,6 +23,11 @@ class Student{
             cout<<"Name : "<<name<<endl;
             cout<<"cgpa : "<<*cgpaPtr<<endl;
         }
+
+        ~Student(){
+            cout<<"I will erase the existence\n";
+            delete cgpaPtr;//memory leak
+        }
 };
 
 int main(){
